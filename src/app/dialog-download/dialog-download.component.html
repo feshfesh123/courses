@@ -1,0 +1,16 @@
+<h4 mat-dialog-tile> Tải về bài tập</h4>
+<mat-dialog-content>
+    <p>{{data.title}}</p>
+    <p>Deadline : {{data.deadline | date}}</p>
+    <form #form="ngForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="code">Code</label>
+            <input type="text" class="form-control" id="code" 
+            [(ngModel)]="code" 
+            required
+            name="code" 
+            placeholder="xxxx-xxxx-xxxx-xxxx">
+        </div>
+        <button class="btn btn-success" type="submit">OK</button>
+    </form>
+</mat-dialog-content>

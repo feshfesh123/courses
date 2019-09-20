@@ -1,0 +1,18 @@
+<div class="cards">
+    <div *ngFor="let course of service.courses">
+        <a class="card1" href="#">
+            <div class="card-body">
+                <a (click)="onSelect(course)">
+                    <p class="small">{{course.id}}</p>
+                    <h3>{{course.name}}</h3>
+                </a>
+                <div class="go-corner" href="#">
+                    <div class="go-arrow">
+                        →
+                    </div>
+                </div>
+            </div>
+        </a>
+
+    </div>
+</div>

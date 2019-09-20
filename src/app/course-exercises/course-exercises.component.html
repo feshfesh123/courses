@@ -1,0 +1,23 @@
+<div *ngFor="let exercise of service.exercises">
+    <a class="card3" href="#">
+        <h3>{{exercise.title}}</h3>
+        <p class="small">Deadline : {{exercise.deadline | date}}</p>
+
+        <div *ngIf="exercise.isDone==true">
+            <div class="btn btn-primary" (click)="downloadClick(exercise)">
+                Download
+            </div>
+        </div>
+        <div *ngIf="exercise.isDone==false">
+            <div class="btn btn-success">
+                Waiting
+            </div>
+        </div>
+        <div class="dimmer"></div>
+        <div class="go-corner" href="#">
+            <div class="go-arrow">
+                ↓
+            </div>
+        </div>
+    </a>
+</div>
